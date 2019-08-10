@@ -1,0 +1,8 @@
+```
+docker-compose run web rails new . --force --database=mysql --skip-bundle
+
+docker-compose build
+docker-compose run app rails db:create
+docker-compose run app rails db:migrate
+docker-compose up
+```
